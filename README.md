@@ -1,6 +1,6 @@
 # Django Template 
 
-##Installation
+###Installation
 
 ```commandline
 mkdir PROJECT_NAME && cd $_
@@ -22,8 +22,29 @@ pip install django-cors-headers
 pip install sentry-sdk
 ```
 ```commandline
-python -m django startproject --template https://github.com/b93de3d/django-template.git PROJECT_NAME .
+python -m django startproject --template 'https://github.com/b93de3d/django-template/archive/master.zip' PROJECT_NAME .
 ```
 ```commandline
 sudo cp /etc/example_config.json /etc/PROJECT_NAME_config.json
+```
+```commandline
+git init
+```
+```commandline
+git add .
+```
+```commandline
+git commit -am "inital"
+```
+```commandline
+python manage.py makemigrations
+```
+```commandline
+python manage.py migrate
+```
+```commandline
+python manage.py createsuperuser
+```
+```commandline
+python manage.py runserver
 ```
