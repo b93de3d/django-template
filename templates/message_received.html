@@ -1,0 +1,12 @@
+{% extends "email_base.html" %}
+{% block content %}
+    <p>
+        Dear {{ first_name }},
+    </p>
+    <p>
+        Thank you for getting in touch.
+        Your message has been received, and we will be in touch shortly.
+    </p>
+    <p>Best Regards,</p>
+    <p>{{ FROM }}</p>
+{% endblock %}
