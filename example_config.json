@@ -1,0 +1,17 @@
+{
+	"ENV": "DEV",
+	"HOST": "",
+	"SECRET_KEY": "",
+	"SENTRY_DSN": "",
+	"STRIPE_SK": "",
+	"STRIPE_WH": "",
+	"EMAIL_HOST_USER": "",
+	"EMAIL_HOST_PASS": "",
+	"DEBUG_EMAIL": "",
+	"DB_NAME": "",
+	"DB_USER": "",
+	"DB_PASS": "",
+	"DB_HOST": "",
+	"DB_PORT": ""
+}
+

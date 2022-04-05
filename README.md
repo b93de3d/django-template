@@ -24,6 +24,11 @@ pip install sentry-sdk
 ```commandline
 python -m django startproject --template 'https://github.com/b93de3d/django-template/archive/master.zip' PROJECT_NAME .
 ```
+Install the dummy config file and edit
+```commandline
+sudo cp example_config.json /etc/PROJECT_NAME_config.json
+```
+or use a local version with actual secrets:
 ```commandline
 sudo cp /etc/example_config.json /etc/PROJECT_NAME_config.json
 ```

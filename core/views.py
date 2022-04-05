@@ -3,11 +3,11 @@ from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
-
 import core.serializers as core_serializers
 import core.models as core_models
+from util import admin_send_email
+from {{ project_name }}.settings import EMAIL_HOST_USER, DEBUG_EMAIL
 
 
 class TokenLogin(ObtainAuthToken):
@@ -31,6 +31,5 @@ class ExampleViewSet(DynamicModelViewSet):
 @api_view(["GET"])
 @permission_classes([])
 def ping(request):
-    if len(request.data.keys()) > 0:
-        raise ValidationError({"data": ["This endpoint does not accept any data."]})
+    admin_send_email([DEBUG_EMAIL], "It works!", "Nice")
     return Response({"message": "pong"}, status=status.HTTP_200_OK)

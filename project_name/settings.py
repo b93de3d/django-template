@@ -85,7 +85,7 @@ else:
             "ENGINE": "django.db.backends.postgresql_psycopg2",
             "NAME": CONFIG["DB_NAME"],
             "USER": CONFIG["DB_USER"],
-            "PASSWORD": CONFIG["DB_PASSWORD"],
+            "PASSWORD": CONFIG["DB_PASS"],
             "HOST": CONFIG["DB_HOST"],
             "PORT": CONFIG["DB_PORT"],
         }
@@ -136,7 +136,9 @@ EMAIL_HOST = "smtp.zoho.com"
 EMAIL_PORT = "465"
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = CONFIG["EMAIL_HOST_USER"]
-EMAIL_HOST_PASSWORD = CONFIG["EMAIL_HOST_PASSWORD"]
+EMAIL_HOST_PASSWORD = CONFIG["EMAIL_HOST_PASS"]
+
+DEBUG_EMAIL = CONFIG["DEBUG_EMAIL"]
 
 STRIPE_SK = CONFIG["STRIPE_SK"]
 STRIPE_WH = CONFIG["STRIPE_WH"]
