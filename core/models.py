@@ -9,11 +9,17 @@ class ExampleManager(models.Manager):
 
 class Example(models.Model):
     def __str__(self):
-        return f"Example Item {self.id}: {self.wow}"
+        return f"Example Item {self.id}: {self.example_field}"
 
     objects = ExampleManager()
 
     class Meta:
         ordering = ["id"]
 
-    wow = models.BooleanField()
+    class Choices(models.TextChoices):
+        LOL = "LOL"
+        GG = "GG"
+
+    example_field = models.CharField(
+        max_length=20, choices=Choices.choices, default=Choices.LOL
+    )
